@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principais Comandos GIT</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+            text-align: center;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 15px;
+        }
+        
+        h2 {
+            color: #667eea;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .comando {
+            background: #f5f5f5;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+        
+        .comando code {
+            display: block;
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+        
+        .comando p {
+            color: #555;
+            margin-top: 10px;
+            line-height: 1.6;
+        }
+        
+        .secao {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Principais Comandos GIT</h1>
+        
+        <div class="secao">
+            <h2>Configuração Inicial</h2>
+            
+            <div class="comando">
+                <p><strong>Configurar nome de usuário:</strong></p>
+                <code>git config --global user.name "Seu Nome"</code>
+            </div>
+            
+            <div class="comando">
+                <p><strong>Configurar email:</strong></p>
+                <code>git config --global user.email "seu@email.com"</code>
+            </div>
+        </div>
+        
+        <div class="secao">
+            <h2>Criando e Clonando Repositórios</h2>
+            
+            <div class="comando">
+                <p><strong>Inicializar um repositório:</strong></p>
+                <code>git init</code>
+            </div>
+            
+            <div class="comando">
+                <p><strong>Clonar um repositório:</strong></p>
+                <code>git clone &lt;url-do-repositório&gt;</code>
+            </div>
+        </div>
+        
+        <div class="secao">
+            <h2>Verificando Status e Histórico</h2>
+            
+            <div class="comando">
+                <p><strong>Ver status dos arquivos:</strong></p>
+                <code>git status</code>
+            </div>
+            
+            <div class="comando">
+                <p><strong>Ver histórico de commits:</strong></p>
+                <code>git log</code>
+            </div>
+            
+            <div class="comando">
+                <p><strong>Ver histórico resumido:</strong></p>
+                <code>git log --oneline</code>
+            </div>
+        </div>
+        
+        <div class="secao">
+            <h2>Adicionando e Comitando Mudanças</h2>
+            
+            <div class="comando">
+                <p><strong>Adicionar arquivo específico:</strong></p>
+                <code>git add &lt;nome-do-arquivo&gt;</code>
+            </div>
+            
+            <div class="comando">
+                <p><strong>Adicionar todos os arquivos modificados:</strong></p>
+                <code>git add .</code>
+            </div>
+            
+            <div class="comando">
+                <p><strong>Fazer commit:</strong></p>
+                <code>git commit -m "Mensagem do commit"</code>
+            </div>
+            
+            <div class="comando">
+                <p><strong>Adicionar e fazer commit simultaneamente:</strong></p>
+                <code>git commit -am "Mensagem do commit"</code>
+            </div>
+        </div>
+        
+        <div class="secao">
+            <h2>Trabalhando com Branches</h2>
+            
+            <div class="comando">
+                <p><strong>Ver branches locais:</strong></p>
+                <code>git branch</code>
+            </div>
+            
+            <div class="comando">
+                <p><strong>Criar uma nova branch:</strong></p>
+                <code>git branch &lt;nome-da-branch&gt;</code>
+            </div>
+            
+            <div class="comando">
+                <p><strong>Mudar de branch:</strong></p>
+                <code>git checkout &lt;nome-da-branch&gt;</code>
+            </div>
+            
+            <div class="comando">
+                <p><strong>Criar e mudar de branch simultaneamente:</strong></p>
+                <code>git checkout -b &lt;nome-da-branch&gt;</code>
+            </div>
+            
+            <div class="comando">
+                <p><strong>Deletar uma branch:</strong></p>
+                <code>git branch -d &lt;nome-da-branch&gt;</code>
+            </div>
+        </div>
+        
+        <div class="secao">
+            <h2>Mesclando Branches</h2>
+            
+            <div class="comando">
+                <p><strong>Mesclar branch no branch atual:</strong></p>
+                <code>git merge &lt;nome-da-branch&gt;</code>
+            </div>
+        </div>
+        
+        <div class="secao">
+            <h2>Interagindo com Repositório Remoto</h2>
+            
+            <div class="comando">
+                <p><strong>Ver repositórios remotos:</strong></p>
+                <code>git remote -v</code>
+            </div>
+            
+            <div class="comando">
+                <p><strong>Adicionar repositório remoto:</strong></p>
+                <code>git remote add origin &lt;url-do-repositório&gt;</code>
+            </div>
+            
+            <div class="comando">
+                <p><strong>Enviar commits para repositório remoto:</strong></p>
+                <code>git push origin &lt;nome-da-branch&gt;</code>
+            </div>
+            
+            <div class="comando">
+                <p><strong>Puxar atualizações do repositório remoto:</strong></p>
+                <code>git pull origin &lt;nome-da-branch&gt;</code>
+            </div>
+        </div>
+        
+        <div class="secao">
+            <h2>Desfazendo Mudanças</h2>
+            
+            <div class="comando">
+                <p><strong>Descartar mudanças no arquivo:</strong></p>
+                <code>git checkout -- &lt;nome-do-arquivo&gt;</code>
+            </div>
+            
+            <div class="comando">
+                <p><strong>Remover arquivo da staging area:</strong></p>
+                <code>git reset &lt;nome-do-arquivo&gt;</code>
+            </div>
+            
+            <div class="comando">
+                <p><strong>Reverter para commit anterior:</strong></p>
+                <code>git revert &lt;hash-do-commit&gt;</code>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
